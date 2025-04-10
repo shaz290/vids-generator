@@ -1,6 +1,7 @@
 import { Button } from '@/components/ui/button'
 import Image from 'next/image'
 import React from 'react'
+import Authentication from './Authentication'
 
 const Header = () => {
     return (
@@ -15,9 +16,13 @@ const Header = () => {
             </div>
 
             <div>
-                <Button>
-                    Get Started
-                </Button>
+
+                <Authentication>
+                    <Button>
+                        Get Started
+                    </Button>
+                </Authentication>
+
             </div>
         </div>
     )
