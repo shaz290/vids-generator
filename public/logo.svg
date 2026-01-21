@@ -1,0 +1,74 @@
+<svg
+  width="330"
+  height="110"
+  viewBox="0 0 330 110"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <defs>
+    <!-- Text Gradient -->
+    <linearGradient id="textGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FFB300"/>
+      <stop offset="100%" stop-color="#FF6F00"/>
+    </linearGradient>
+
+    <!-- Play Button Gradient -->
+    <linearGradient id="playGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFCA28"/>
+      <stop offset="100%" stop-color="#FF8F00"/>
+    </linearGradient>
+
+    <!-- Glow -->
+    <filter id="softGlow">
+      <feGaussianBlur stdDeviation="2.5" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Hex Play Button -->
+  <polygon
+    points="40,20 65,35 65,65 40,80 15,65 15,35"
+    fill="url(#playGradient)"
+    filter="url(#softGlow)"
+  />
+
+  <!-- Inner Arc -->
+  <path
+    d="M40 35 A15 15 0 1 1 39.9 35"
+    fill="none"
+    stroke="#2B2B2B"
+    stroke-width="2"
+    opacity="0.6"
+  />
+
+  <!-- Play Icon -->
+  <polygon points="36,40 36,60 52,50" fill="#2B2B2B"/>
+
+  <!-- Text -->
+  <text
+    x="90"
+    y="65"
+    font-size="44"
+    font-weight="700"
+    font-family="Inter, Poppins, Arial, sans-serif"
+    fill="url(#textGradient)"
+    letter-spacing="1"
+  >
+    AI Vids
+  </text>
+
+  <!-- AI Network Dots (VERY CLOSE) -->
+  <circle cx="255" cy="32" r="3.5" fill="#FFB300"/>
+  <circle cx="270" cy="52" r="3.5" fill="#FF6F00"/>
+  <circle cx="285" cy="32" r="3.5" fill="#FFB300"/>
+  <circle cx="270" cy="72" r="3.5" fill="#FFCA28"/>
+
+  <!-- AI Network Lines -->
+  <line x1="255" y1="32" x2="270" y2="52" stroke="#FF8F00" stroke-width="2" stroke-linecap="round"/>
+  <line x1="270" y1="52" x2="285" y2="32" stroke="#FF8F00" stroke-width="2" stroke-linecap="round"/>
+  <line x1="255" y1="32" x2="285" y2="32" stroke="#FF6F00" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="270" y1="52" x2="270" y2="72" stroke="#FF8F00" stroke-width="2" stroke-linecap="round"/>
+  <line x1="255" y1="32" x2="270" y2="72" stroke="#FFB300" stroke-width="1.5" stroke-linecap="round"/>
+</svg>
